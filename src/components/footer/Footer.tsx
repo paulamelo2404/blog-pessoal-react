@@ -1,9 +1,9 @@
-import { FacebookLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from "@phosphor-icons/react"
+import { BehanceLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from "@phosphor-icons/react"
 
 
 function Footer() {
 
-    const data = new Date().getFullYear()
+    let data = new Date().getFullYear()
 
     return (
         <>
@@ -14,9 +14,15 @@ function Footer() {
                         </p>
                     <p className='text-lg'>Acesse nossas redes sociais</p>
                     <div className='flex gap-2'>
-                        <LinkedinLogoIcon size={48} weight='bold' />
-                        <InstagramLogoIcon size={48} weight='bold' />
-                        <FacebookLogoIcon size={48} weight='bold' />
+                        <a href="https://www.linkedin.com/in/paula-melo2404/" target="_blank">
+                            <LinkedinLogoIcon size={48} weight='bold' />
+                        </a>
+                        <a href="https://www.instagram.com/seu_usuario" target="_blank">
+                            <InstagramLogoIcon size={48} weight='bold' />
+                        </a>
+                        <a href="https://www.behance.net/pmelo" target="_blank">
+                            <BehanceLogoIcon size={48} weight='bold' />
+                        </a>
                     </div>
                 </div>
             </div>
