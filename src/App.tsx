@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
+import DeletarPostagem from './components/postagem/deletarpostagem/DeletarPostagem'
 import FormPostagem from './components/postagem/formpostagem/FormPostagem'
 import ListaPostagens from './components/postagem/listapostagem/ListaPostagens'
 import DeletarTema from './components/tema/deletartema/DeletarTema'
@@ -29,6 +30,7 @@ function App() {
 							<Route path="/postagens" element={<ListaPostagens />} />
 							<Route path="/cadastrarpostagem" element={<FormPostagem />} />
               <Route path="/editarpostagem/:id" element={<FormPostagem />} />
+							<Route path="/deletarpostagem/:id" element={<DeletarPostagem />} />
 						</Routes>
 					</div>
 					<Footer />
