@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+# 📝 Blog Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌟 Visão Geral
 
-Currently, two official plugins are available:
+Este projeto é um blog pessoal desenvolvido com React, que permite aos usuários criar, visualizar, editar e excluir postagens. Os usuários também podem se cadastrar, fazer login e interagir com as postagens de outros usuários.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## React Compiler
+*   **🔑 Autenticação de Usuário:**
+    *   Cadastro de novos usuários.
+    *   Login com usuários existentes.
+    *   Manutenção do estado de login em toda a aplicação.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+*   **✍️ Postagens:**
+    *   Criação de novas postagens.
+    *   Visualização de todas as postagens em um feed.
+    *   Edição de postagens existentes.
+    *   Exclusão de postagens.
 
-## Expanding the ESLint configuration
+*   **🏷️ Temas:**
+    *   Criação de novos temas.
+    *   Visualização de todos os temas.
+    *   Edição de temas existentes.
+    *   Exclusão de temas.
+    *   Associação de postagens a temas.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+*   **👤 Perfil:**
+    *   Visualização do perfil do usuário.
+    *   Visualização das postagens do usuário.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Tecnologias Utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+*   **Frontend:**
+    *   [React](https://reactjs.org/)
+    *   [Vite](https://vitejs.dev/)
+    *   [TypeScript](https://www.typescriptlang.org/)
+    *   [Tailwind CSS](https://tailwindcss.com/)
+    *   [Axios](https://axios-http.com/)
+    *   [React Router DOM](https://reactrouter.com/)
+    *   [Phosphor Icons](https://phosphoricons.com/)
+    *   [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ▶️ Como Executar o Projeto
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/seu-usuario/blog-pessoal-react.git
+    ```
+
+2.  **Instale as dependências:**
+    ```bash
+    cd blog-pessoal-react
+    npm install
+    ```
+
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Abra o navegador e acesse:**
+    ```
+    http://localhost:5173/
+    ```
+
+## 📁 Estrutura do Projeto
+
+```
+/src
+|-- /assets
+|-- /components
+|   |-- /footer
+|   |-- /navbar
+|   |-- /postagem
+|   |-- /tema
+|-- /contexts
+|-- /models
+|-- /pages
+|   |-- /cadastro
+|   |-- /home
+|   |-- /login
+|   |-- /perfil
+|-- /services
+|-- /utils
+|-- App.css
+|-- App.tsx
+|-- index.css
+|-- main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   **`src/assets`**: Contém arquivos de mídia, como imagens e ícones. 🖼️
+*   **`src/components`**: Contém componentes React reutilizáveis. 🧩
+*   **`src/contexts`**: Contém os contextos da aplicação, como o de autenticação. 🌐
+*   **`src/models`**: Contém as definições de tipo para os modelos de dados. 📦
+*   **`src/pages`**: Contém os componentes de página da aplicação. 📄
+*   **`src/services`**: Contém os serviços responsáveis pela comunicação com a API. 📡
+*   **`src/utils`**: Contém funções utilitárias. 🛠️

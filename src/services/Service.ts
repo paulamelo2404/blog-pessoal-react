@@ -1,9 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'https://projeto-blogpessoal-backend-nest-js.onrender.com'
+    baseURL: import.meta.env.VITE_API_URL
 })
-
 export const cadastrarUsuario = async (url: string, dados: object, setDados: Function) => {
     const resposta = await api.post(url, dados)
     setDados(resposta.data)
